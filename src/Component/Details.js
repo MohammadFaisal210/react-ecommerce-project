@@ -5,12 +5,14 @@ import {Link} from "react-router-dom";
 import Imagex from "./Imagex"
 export default function Deatils() {
     const {id} = useParams();
-    const [products] = useContext(ProductContext);
+    const [value] = useContext(ProductContext);
+    const [products] = value.products;
     const details =products.filter((product, index) =>{
         return product.id === id
     })
 
  const [index,setIndex] = useState(0)
+ const addCart = value.addCart;
  
 
     return (
@@ -19,32 +21,31 @@ export default function Deatils() {
         <div className="container">
                         {/* <section key={id}> */}
                 {details.map((item,keyid)=>{
-                    const {images,title,des,info,price} = item;
+                    const {id,images,title,des,info,price} = item;
                     return(
-                        <>
+                        
                         <div key={keyid} className="row mt-5">
-                        <div className="col-lg-5 col-md-8 col-10 mx-auto">
+                        <div className="col-lg-4 col-md-8 col-10 mx-auto">
                             <div id="detailImg" className="">
-                                <img src={images[index]} alt="Product" />
+                                <img className="img-fluid" src={images[index]} alt="Product" />
                             </div>
                         <Imagex images={images} setIndex={setIndex} />
                         </div>
-                        <div className="mt-5 col-lg-6 col-md-8 col-12 mx-auto">
+                        <div  className="mt-5 col-lg-6 my-auto col-md-8 col-10 mx-auto">
                             <div>
-                                <h4 className="font-weight-bold text-success">{title}</h4>
-                                <h5 className="text-danger">TK : {price}</h5>
-                                <p>{des}</p>
+                                <h1 className="font-weight-bold text-success">{title}</h1>
+                                <h2 className="py-3 text-danger">TK : {price}</h2>
+                                <p className="proInfo">{des}</p>
                             </div>
                             <Link to="/">
-                            <button className="btn btn-success">Continue shopping</button>
+                            <button style={{background:"#0d6efd"}} className="shop_btn">Continue shopping</button>
                             </Link>
                             <Link to="/card">
-                            <button className="btn btn-danger mx-2">Add to cart</button>
+                            <button onClick={()=>addCart(id)} className="shop_btn mx-2">Add to cart</button>
                             </Link>
                         </div>
                     </div>
-                        {/* </section> */}
-                        </>
+                        
                     )
                 })}
         </div>

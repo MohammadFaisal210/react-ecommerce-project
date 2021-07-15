@@ -2,15 +2,20 @@ import React, { useContext } from 'react';
 import {ProductContext} from "./ContextPro";
 import {Link} from "react-router-dom";
 import Banner from "./Banner";
+import { useState } from 'react/cjs/react.development';
 
 export default function Products() {
-    const [products] = useContext(ProductContext);
+    const [value] = useContext(ProductContext);
+    const [products] = value.products;
+    console.log(value.addCart);
+    const addCart = value.addCart;
+    const [shop,setShop] = useState(false)
     return (
         <>
         <Banner/>
-           <section className="bg-info px-3 ">
+           <section className=" px-3 ">
                    <div className="row">
-                   <h1 className="text-center text-white py-3">Choose your products</h1>
+                   <h1 id="prdAfter" className="text-center  py-3">Choose Your Products</h1>
                     {products.map((item)=>{
                         const {images,id,title,price} = item;
                     return(
@@ -21,9 +26,15 @@ export default function Products() {
                                 <img src={images[0]} alt="products" />
                                 </Link>
                             </div>
-                            <div className="text-white">
-                                <p className="mb-0">{title}</p>
-                                <p>TK : {price}</p>
+                            <div className="text-muted">
+                                <h4 className="mb-0">{title}</h4>
+                                <h3>TK : {price}</h3>
+                            </div>
+                            <div className="buttonshop">
+                                <Link to="card" className="proBtn" 
+                                onClick={()=>addCart(id)}>
+                                    add to cart
+                                    </Link>
                             </div>
                         </div>
                     )

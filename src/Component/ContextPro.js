@@ -1,32 +1,38 @@
-import React, { createContext,useState } from 'react';
+import React, { createContext,useEffect,useState } from 'react';
 import {productsData,deatails} from "./data";
 export const ProductContext = createContext();
 export const ContextPro = (props)=>{
-    const [products,setProducts] = useState(
-    //    [ {
-    //         "id":"1",
-    //        img:"img1",
-    //         title:"Smart-Wach",
-    //         des:"",
-    //         info:"",
-    //         price:4500,
-    //     },
-    //     {
-    //         "id":"2",
-    //     img:"img2",
-    //         title:"Head-Phones",
-    //         des:"",
-    //         info:"",
-    //         price:6800,
-    //     }]
-        productsData
-    );
+    const [products,setProducts] = useState( productsData);
 
-
-
+    const [cart,setCart] = useState([]);
+    const addCart = (id) =>{
+        const check =cart.every(item=>{
+            return item.id !== id
+        })
+        if(check){
+            const data = products.filter(product=>{
+                return product.id ===id
+            })
+            setCart([...cart,...data])
+        }else{
+            alert("the product has been added to cart")
+        }
+    }
+    useEffect(()=>{
+        const dataCart = JSON.parse(localStorage.getItem('dataCart'))
+        if(dataCart) setCart(dataCart)
+    },[])
+    useEffect(()=>{
+        localStorage.setItem('dataCart',JSON.stringify(cart))
+    },[cart])
+    const value = {
+        products : [products,setProducts],
+        cart:[cart,setCart],
+        addCart:addCart
+    }
 return (
     <>
-       <ProductContext.Provider value={[products,setProducts]}>
+       <ProductContext.Provider value={[value]}>
           { props.children}
        </ProductContext.Provider> 
     </>

@@ -20,7 +20,7 @@ export default function App() {
     <Routes>
     <Route exact path="/" element={<Products/>} />
     <Route exact path="/:id" element={<Details/>} />
-    {/* <Route exact path="/card" element={<Card/>} /> */}
+    <Route exact path="/card" element={<Card/>} />
     </Routes>
     </Router>
     </ContextPro>
