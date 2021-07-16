@@ -81,6 +81,7 @@ export const productsData=[
         des:"Why use React Router? React Router, and dynamic, client-side routing, allows us to build a single-page web application with navigation without the page refreshing as the user navigates. React Router uses component structure to call components, which display the appropriate information.",
         info:"",
         price:4500,
+        "count":1,
     },
     {
         "id":"2",
@@ -89,6 +90,7 @@ export const productsData=[
         des:"Why use React Router? React Router, and dynamic, client-side routing, allows us to build a single-page web application with navigation without the page refreshing as the user navigates. React Router uses component structure to call components, which display the appropriate information.",
         info:"",
         price:6800,
+        "count":"1"
     },
     {
         "id":"3",
@@ -96,6 +98,7 @@ export const productsData=[
         title:"Mouse",
         des:"Why use React Router? React Router, and dynamic, client-side routing, allows us to build a single-page web application with navigation without the page refreshing as the user navigates. React Router uses component structure to call components, which display the appropriate information.",
         info:"",
+        count:"1",
         price:1899,
     },
     {
@@ -105,6 +108,7 @@ export const productsData=[
         des:"Why use React Router? React Router, and dynamic, client-side routing, allows us to build a single-page web application with navigation without the page refreshing as the user navigates. React Router uses component structure to call components, which display the appropriate information.",
         info:"",
         price:4999,
+        count:1,
     },
     {
         "id":"5",
@@ -113,6 +117,7 @@ export const productsData=[
         des:"Why use React Router? React Router, and dynamic, client-side routing, allows us to build a single-page web application with navigation without the page refreshing as the user navigates. React Router uses component structure to call components, which display the appropriate information.",
         info:"",
         price:3899,
+        count:1,
     },
     {
         "id":"6",
@@ -121,6 +126,7 @@ export const productsData=[
         des:"Why use React Router? React Router, and dynamic, client-side routing, allows us to build a single-page web application with navigation without the page refreshing as the user navigates. React Router uses component structure to call components, which display the appropriate information.",
         info:"",
         price:2989,
+        count:1,
     },
     {
         "id":"7",
@@ -129,6 +135,7 @@ export const productsData=[
         des:"Why use React Router? React Router, and dynamic, client-side routing, allows us to build a single-page web application with navigation without the page refreshing as the user navigates. React Router uses component structure to call components, which display the appropriate information.",
         info:"",
         price:89070,
+        count:1,
     },
     {
         "id":"8",
@@ -137,6 +144,7 @@ export const productsData=[
         des:"Why use React Router? React Router, and dynamic, client-side routing, allows us to build a single-page web application with navigation without the page refreshing as the user navigates. React Router uses component structure to call components, which display the appropriate information.",
         info:"",
         price:25750,
+        count:1,
     },
     {
         "id":"9",
@@ -145,6 +153,7 @@ export const productsData=[
         des:"Why use React Router? React Router, and dynamic, client-side routing, allows us to build a single-page web application with navigation without the page refreshing as the user navigates. React Router uses component structure to call components, which display the appropriate information.",
         info:"",
         price:2405,
+        count:1,
     },
     {
         "id":"10",
@@ -153,6 +162,7 @@ export const productsData=[
         des:"Why use React Router? React Router, and dynamic, client-side routing, allows us to build a single-page web application with navigation without the page refreshing as the user navigates. React Router uses component structure to call components, which display the appropriate information.",
         info:"",
         price:8990,
+        count:1,
     },
     // {
     //     "id":6,

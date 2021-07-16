@@ -7,9 +7,10 @@ import { useState } from 'react/cjs/react.development';
 export default function Products() {
     const [value] = useContext(ProductContext);
     const [products] = value.products;
-    console.log(value.addCart);
+    // console.log(value.addCart);
     const addCart = value.addCart;
     const [shop,setShop] = useState(false)
+    // console.log(products);
     return (
         <>
         <Banner/>
@@ -17,7 +18,7 @@ export default function Products() {
                    <div className="row">
                    <h1 id="prdAfter" className="text-center  py-3">Choose Your Products</h1>
                     {products.map((item)=>{
-                        const {images,id,title,price} = item;
+                        const {images,id,title,price,count} = item;
                     return(
                             <div key={id} className="pt-5 col-lg-2 col-md-4 col-8 mx-auto">
                             <div id="card_img" 
@@ -31,7 +32,7 @@ export default function Products() {
                                 <h3>TK : {price}</h3>
                             </div>
                             <div className="buttonshop">
-                                <Link to="card" className="proBtn" 
+                                <Link to="/" className="proBtn" 
                                 onClick={()=>addCart(id)}>
                                     add to cart
                                     </Link>

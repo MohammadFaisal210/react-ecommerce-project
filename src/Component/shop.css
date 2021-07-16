@@ -203,7 +203,22 @@ html{
 }
         /* cart page */
 
-
+        .btnCount{
+            border:1px solid black;
+            background: gray;
+            color: #fff;
+            padding: 2px 4px;
+            cursor: pointer;
+            margin-left: 2px;
+            margin-top: 10px;
+        }
+        .totalTk{
+            float: right;
+            background: black;
+            color: #fb5200;
+            padding: 10px 25px;
+            margin-right: 110px;
+        }
 
 
 
@@ -266,7 +281,7 @@ html{
                 background: gray;
             }
             #cartlength{
-                top: 68%;
+                top:230PX;
                 left: 42px;
             }
             /* deatails page */

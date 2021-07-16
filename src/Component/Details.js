@@ -14,6 +14,12 @@ export default function Deatils() {
  const [index,setIndex] = useState(0)
  const addCart = value.addCart;
  
+//  const handleMouse =e=>{
+//      const {left,top,width,height} = e.target.getBoundingClientReact();
+//      const x = (e.pageX - left) / width*100
+//      const y = (e.pageY - top) /height * 100
+//     imgDiv.current.style.backgroundPosition = `${x}% ${y}%`
+//  }
 
     return (
         <>

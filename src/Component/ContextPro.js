@@ -3,7 +3,7 @@ import {productsData,deatails} from "./data";
 export const ProductContext = createContext();
 export const ContextPro = (props)=>{
     const [products,setProducts] = useState( productsData);
-
+    // console.log(productsData)
     const [cart,setCart] = useState([]);
     const addCart = (id) =>{
         const check =cart.every(item=>{
