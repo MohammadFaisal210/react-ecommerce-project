@@ -11,7 +11,7 @@ export default function Banner() {
     const [bg, setbg] = useState(banner1)
     return (
         <>
-            <section className="" style={{backgroundImage:`url(${bg})`}}
+            <section style={{backgroundImage:`url(${bg})`}}
              className="bannerMain">
             <div className="container">
                 <div className="bannerHead">

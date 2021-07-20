@@ -27,7 +27,7 @@ export default function Deatils() {
         <div className="container">
                         {/* <section key={id}> */}
                 {details.map((item,keyid)=>{
-                    const {id,images,title,des,info,price} = item;
+                    const {id,images,title,des,price} = item;
                     return(
                         
                         <div key={keyid} className="row mt-5">

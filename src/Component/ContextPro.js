@@ -1,5 +1,5 @@
 import React, { createContext,useEffect,useState } from 'react';
-import {productsData,deatails} from "./data";
+import {productsData} from "./data";
 export const ProductContext = createContext();
 export const ContextPro = (props)=>{
     const [products,setProducts] = useState( productsData);

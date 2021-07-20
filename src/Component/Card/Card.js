@@ -1,6 +1,6 @@
 import React,{useContext,useState,useEffect} from 'react';
 import {ProductContext} from "../ContextPro";
-import {Link} from "react-router-dom";
+// import {Link} from "react-router-dom";
 import CardColumn from "./CardColumn";
 
 const Card=()=>{
